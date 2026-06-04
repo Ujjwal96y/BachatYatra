@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BachatYatra - GenZ don't only spend, we also track and save.</title>
+    <link rel="stylesheet" href="../CSS/Style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="brand">
+            <div class="brand-icon">
+                <img src="../assets/BachatYatra-Logo.png" alt="BY">
+            </div>
+            <span class="brand-name">BachatYatra</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#tracker">TRACKER</a></li>
+            <li><a href="#news">NEWS</a></li>
+            <li><a href="#learn">LEARN</a></li>
+            <li><a href="index.html" class="nav-login">LOGIN</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">FOR STUDENTS--BYSYUDENTS</div>
+            <h1 class="hero-title">Your Money.<br><span class="accent">Your Journey.</span></h1>
+            <p class="hero-sub">
+                Save smarter, invest wiser, and stay ahead of Nepal's financial world —
+                all in one place designed for students like you.
+            </p>
+            <div class="hero-buttons">
+                <a href="#tracker" class="btn-primary">Start Tracking</a>
+                <a href="#news" class="btn-outline">Latest News</a>
+            </div>
+        </div>
+        
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <p class="section-tag">What We Offer</p>
+        <h2 class="section-title">Everything you need to<br>grow your money</h2>
+        <div class="features-grid">
+            <a href="#tracker" class="feature-card card-green">
+                <div class="feature-icon"></div>
+                <h3>Savings Tracker</h3>
+                <p>Log your savings monthly and watch your money grow over time.</p>
+            </a>
+            <a href="#" class="feature-card card-blue">
+                <div class="feature-icon"></div>
+                <h3>Investment Guide</h3>
+                <p>Step-by-step guidance on mutual funds, stocks, and fixed deposits.</p>
+            </a>
+            <a href="#news" class="feature-card card-yellow">
+                <div class="feature-icon"></div>
+                <h3>Financial News</h3>
+                <p>Curated news from NEPSE, NRB, and global markets — simplified.</p>
+            </a>
+            <a href="#" class="feature-card card-red">
+                <div class="feature-icon"></div>
+                <h3>Goal Planner</h3>
+                <p>Set financial goals and get a clear roadmap to achieve them.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="tracker-section" id="tracker">
+        <div class="tracker-wrapper">
+            <div class="tracker-left">
+                <p class="section-tag light">Your Finance Hub</p>
+                <h2 class="section-title light">Track Savings and<br>Investments</h2>
+                <p class="tracker-desc">Add your monthly savings and investment amounts to see your financial picture at a glance. Charts update in real time.</p>
+
+                <div class="input-group">
+                    <label>Month</label>
+                    <select id="monthSelect">
+                        <option value="Jan">January</option>
+                        <option value="Feb">February</option>
+                        <option value="Mar">March</option>
+                        <option value="Apr">April</option>
+                        <option value="May">May</option>
+                        <option value="Jun">June</option>
+                        <option value="Jul">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sep">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Savings (₨)</label>
+                        <input type="number" id="savingsInput" placeholder="e.g. 3000" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label>Investment (₨)</label>
+                        <input type="number" id="investInput" placeholder="e.g. 1500" min="0">
+                    </div>
+                </div>
+
+                <button class="btn-add" id="addBtn">+ Add Entry</button>
+
+                <div class="entries-table" id="entriesTable">
+                    <p class="no-entry">No entries yet. Add your first one!</p>
+                </div>
+
+                <div class="totals-row" id="totalsRow" style="display:none;">
+                    <div class="total-box">
+                        <span>Total Savings</span>
+                        <strong id="totalSavings">₨0</strong>
+                    </div>
+                    <div class="total-box invest-box">
+                        <span>Total Invested</span>
+                        <strong id="totalInvest">₨0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracker-right">
+                <div class="chart-box">
+                    <h4>Monthly Overview</h4>
+                    <canvas id="barChart" height="220"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h4>Savings vs Investment</h4>
+                    <canvas id="pieChart" height="220"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="news">
+        <p class="section-tag">Stay Informed</p>
+        <h2 class="section-title">Financial News and<br>Market Updates</h2>
+        <div class="news-grid">
+            <div class="news-card featured-news">
+                <div class="news-tag">NEPSE</div>
+                <h3>NEPSE Index Crosses 2,100 Points Amid Positive Sentiment</h3>
+                <p>Nepal's stock exchange saw a surge this week as banking and hydropower sectors led gains. Analysts attribute the rise to increased retail investor confidence and improved liquidity.</p>
+                <div class="news-meta">
+                    <span>Author: Ujjwal Yadav</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-tag tag-blue">NRB</div>
+                <h3>NRB Keeps Policy Rate Unchanged at 5.5%</h3>
+                <p>Nepal Rastra Bank's monetary policy review maintains the current rate, signaling stability for borrowers and fixed deposit holders.</p>
+                <div class="news-meta">
+                    <span>Author: Kushal Adikari</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-tag tag-green">MUTUAL FUNDS</div>
+                <h3>Top 5 Mutual Funds for Students in Nepal (2025)</h3>
+                <p>With as little as ₨1,000, students can start investing in SIP-based mutual funds. Here's what's performing best this year.</p>
+                <div class="news-meta">
+                    <span>Author: Bhumika Khafle</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-tag tag-purple">GLOBAL</div>
+                <h3>Fed Rate Decision: What It Means for Nepal's Economy</h3>
+                <p>As the US Federal Reserve holds rates steady, remittance flows and forex reserves in Nepal show positive trends for 2025.</p>
+                <div class="news-meta">
+                    <span>Author: Ujjwal Yadav</span>
+                    <a href="#">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learn-section" id="learn">
+        <p class="section-tag light">For Beginners</p>
+        <h2 class="section-title light">How to Start Investing<br>as a Student</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h4>Open a Demat Account</h4>
+                <p>Register with CDSC Nepal to get your Demat account. It's free for students and takes under 15 minutes online.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h4>Start with Mutual Funds</h4>
+                <p>Low risk, professionally managed. Start a SIP with as little as ₨500/month through funds like Nabil Balanced Fund.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h4>Explore NEPSE Stocks</h4>
+                <p>Once comfortable, buy shares of strong sectors — hydropower, banking, insurance. Research before buying.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h4>Track & Rebalance</h4>
+                <p>Use BachatYatra's tracker to monitor growth and rebalance your portfolio every 6 months for best returns.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-inner">
+            <h2>Ready to start your<br><span class="accent">Bachat Yatra?</span></h2>
+            <p>Join thousands of Nepali students who are taking control of their finances today.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Create Free Account</a>
+                <a href="#" class="btn-outline-dark">Explore Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="brand-icon">
+                    <img src="../assets/BachatYatra-Logo.png" alt="BY">
+                </div>
+                <span class="brand-name">BachatYatra</span>
+                <p>Platform build by students, for studnts to guide them as a financial mentor.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="#">Savings Tracker</a></li>
+                        <li><a href="#">Investment Guide</a></li>
+                        <li><a href="#">Goal Planner</a></li>
+                        <li><a href="#">Financial News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Learn</h5>
+                    <ul>
+                        <li><a href="#">Demat Account</a></li>
+                        <li><a href="#">Mutual Funds</a></li>
+                        <li><a href="#">NEPSE Guide</a></li>
+                        <li><a href="#">Fixed Deposits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BachatYatra | All rights reserved | FOR STUDENTS--BY STUDENTS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
