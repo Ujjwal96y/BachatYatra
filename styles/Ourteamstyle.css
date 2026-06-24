@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root{
+    --primary: #1a6b3c;
+    --primary-light: #27a85e;
+    --primary-dark: #0f4025;
+    --accent: #f5c518;
+    --accent-dark: #d4a700;
+    --bg-dark: #0d1f14;
+    --bg-card: #142a1d;
+    --bg-light: #f4f9f6;
+    --text-white: #ffffff;
+    --text-light: #c8ddd1;
+    --text-muted: #7aad90;
+    --text-dark: #1a2e22;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --radius: 16px;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:var(--font-body);
+}
+
+body{
+    background-color:var(--bg-light);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.team-section{
+    width:85%;
+    padding:25px;
+    margin:auto;
+    text-align:center;
+}
+
+.team-section h2{
+    font-size:40px;
+    color:var(--primary-dark);
+    margin-bottom:30px;
+    font-family:var(--font-display);
+}
+
+.team-container{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+}
+
+.team-member{
+    width:300px;
+    background-color:var(--text-white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:20px;
+    margin:10px;
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.team-member:hover{
+    transform:translateY(-10px);
+}
+
+.team-member img{
+    border-radius:50%;
+    border:4px solid var(--primary-light);
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+.team-member h3{
+    font-size:28px;
+    color:var(--primary);
+    margin-bottom:10px;
+    font-family:var(--font-display);
+}
+
+.team-member .title{
+    font-size:18px;
+    color:var(--text-muted);
+    margin-bottom:10px;
+}
+
+.team-member .content{
+    font-size:16px;
+    color:var(--text-dark);
+    line-height:1.3;
+}

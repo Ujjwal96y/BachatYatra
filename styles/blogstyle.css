@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root{
+    --primary: #1a6b3c;
+    --primary-light: #27a85e;
+    --primary-dark: #0f4025;
+    --accent: #f5c518;
+    --accent-dark: #d4a700;
+    --bg-dark: #0d1f14;
+    --bg-card: #142a1d;
+    --bg-light: #f4f9f6;
+    --text-white: #ffffff;
+    --text-light: #c8ddd1;
+    --text-muted: #7aad90;
+    --text-dark: #1a2e22;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --radius: 16px;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:var(--font-body);
+}
+
+.container{
+    width:100%;
+    background-color:var(--bg-light);
+}
+
+.container .row{
+    width:80%;
+    margin:auto;
+}
+
+.container .row .header{
+    width:60%;
+    text-align:center;
+    margin:auto;
+}
+
+.container .row .header h1{
+    padding-top:30px;
+    font-size:45px;
+    color:var(--primary-dark);
+    font-family:var(--font-display);
+}
+
+.container .row .header p{
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.5;
+    color:var(--text-dark);
+    font-family:var(--font-body);
+}
+
+.content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+
+.content .card{
+    flex:1;
+    margin:50px 20px;
+    box-shadow:var(--shadow);
+    background-color:var(--bg-card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+}
+
+.content .card img{
+    width:50%;
+    height:auto;
+}
+
+.content .card h4{
+    margin-top:10px;
+    margin-left:10px;
+    font-size:18px;
+    color:var(--text-white);
+    font-family:var(--font-display);
+}
+
+.content .card p{
+    font-size:15px;
+    color:var(--text-light);
+    line-height:1.5;
+    padding:10px;
+    font-family:var(--font-body);
+}
+
+@media screen and (max-width:768px){
+    .content{
+        flex-direction:column;
+    }
+}
