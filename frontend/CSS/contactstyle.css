@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root{
+    --primary: #1a6b3c;
+    --primary-light: #27a85e;
+    --primary-dark: #0f4025;
+    --accent: #f5c518;
+    --accent-dark: #d4a700;
+    --bg-dark: #0d1f14;
+    --bg-card: #142a1d;
+    --bg-light: #f4f9f6;
+    --text-white: #ffffff;
+    --text-light: #c8ddd1;
+    --text-muted: #7aad90;
+    --text-dark: #1a2e22;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --radius: 16px;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:var(--font-body);
+}
+
+body{
+    background-color:var(--bg-light);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.contact-container{
+    background-color:var(--text-white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    max-width:600px;
+    width:100%;
+    padding:32px;
+}
+
+.contact-container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:var(--primary-dark);
+    font-size:32px;
+    font-family:var(--font-display);
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:16px;
+    background-color:var(--bg-light);
+    color:var(--text-dark);
+}
+
+input:focus,
+textarea:focus{
+    border:1px solid var(--primary);
+    box-shadow:0 0 5px rgba(26, 107, 60, 0.3);
+    outline:none;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+button{
+    display:block;
+    margin:auto;
+    background-color:var(--primary);
+    color:var(--text-white);
+    border:none;
+    padding:12px 16px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+button:hover{
+    background-color:var(--accent);
+    color:var(--primary-dark);
+}
