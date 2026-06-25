@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap');
+
+:root{
+    --primary:#1a6b3c;
+    --primary-light:#27a85e;
+    --primary-dark:#0f4025;
+
+    --accent:#f5c518;
+    --accent-dark:#d4a700;
+
+    --bg-dark:#0d1f14;
+    --bg-card:#142a1d;
+    --bg-light:#f4f9f6;
+
+    --text-white:#ffffff;
+    --text-light:#c8ddd1;
+    --text-muted:#7aad90;
+    --text-dark:#1a2e22;
+
+    --border:rgba(255,255,255,0.08);
+    --shadow:0 8px 32px rgba(0,0,0,0.25);
+    --radius:16px;
+
+    --font-display:'Playfair Display',serif;
+    --font-body:'Nunito',sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:var(--font-body);
+}
+
+body{
+
+    background:var(--bg-light);
+
+}
+
+.career-page{
+
+    width:100%;
+    min-height:100vh;
+    padding:80px 0;
+
+}
+
+.career-wrapper{
+
+    width:85%;
+    margin:auto;
+
+}
+
+.career-header{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.career-header h1{
+
+    font-size:50px;
+    color:var(--primary-dark);
+    font-family:var(--font-display);
+    margin-bottom:20px;
+
+}
+
+.career-header p{
+
+    font-size:18px;
+    color:var(--text-dark);
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+
+}
+
+.career-cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+
+}
+
+.career-card{
+
+    background:var(--bg-card);
+    padding:30px;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    transition:.3s;
+
+}
+
+.career-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.career-card h2{
+
+    color:var(--text-white);
+    font-size:28px;
+    margin-bottom:15px;
+    font-family:var(--font-display);
+
+}
+
+.career-card p{
+
+    color:var(--text-light);
+    line-height:1.7;
+    margin-bottom:25px;
+
+}
+
+.career-card a{
+
+    display:inline-block;
+    text-decoration:none;
+    background:var(--primary);
+    color:var(--text-white);
+    padding:12px 28px;
+    border-radius:var(--radius);
+    transition:.3s;
+
+}
+
+.career-card a:hover{
+
+    background:var(--accent);
+    color:var(--primary-dark);
+
+}
+
+@media(max-width:768px){
+
+    .career-header h1{
+
+        font-size:38px;
+
+    }
+
+    .career-header p{
+
+        font-size:16px;
+
+    }
+
+}
